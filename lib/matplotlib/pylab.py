@@ -277,4 +277,4 @@ import numpy.ma as ma
 import datetime
 
 if sys.version_info > (2, 6, 0):
-    bytes = __builtins__['bytes']
+    bytes = __builtins__.bytes

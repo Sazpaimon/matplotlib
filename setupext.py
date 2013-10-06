@@ -907,6 +907,7 @@ class Delaunay(SetupPackage):
         sources = [os.path.join('lib/matplotlib/delaunay', s) for s in sources]
         ext = make_extension('matplotlib._delaunay', sources)
         Numpy().add_flags(ext)
+        CXX().add_flags(ext)
         return ext
 
 

@@ -37,18 +37,6 @@ else:
     cachedir = None
 
 
-stock_dt = np.dtype([('date', object),
-                     ('year', np.int16),
-                     ('month', np.int8),
-                     ('day', np.int8),
-                     ('d', np.float),     # mpl datenum
-                     ('open', np.float),
-                     ('close', np.float),
-                     ('high', np.float),
-                     ('low', np.float),
-                     ('volume', np.float),
-                     ('aclose', np.float)])
-
 
 def parse_yahoo_historical(fh, adjusted=True, asobject=False):
     """
@@ -90,6 +78,18 @@ def parse_yahoo_historical(fh, adjusted=True, asobject=False):
       very similar to the Bunch.
 
     """
+    stock_dt = np.dtype([('date', object),
+                     ('year', np.int16),
+                     ('month', np.int8),
+                     ('day', np.int8),
+                     ('d', np.float),     # mpl datenum
+                     ('open', np.float),
+                     ('close', np.float),
+                     ('high', np.float),
+                     ('low', np.float),
+                     ('volume', np.float),
+                     ('aclose', np.float)])
+
 
     lines = fh.readlines()
 
