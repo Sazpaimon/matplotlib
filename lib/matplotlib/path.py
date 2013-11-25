@@ -157,8 +157,8 @@ class Path(object):
                 self._vertices.flags.writeable = False
                 if self._codes is not None:
                     self._codes.flags.writeable = False
-            except AttributeError:
-                # PyPy ndarray doesn't have flags - ignore
+            except TypeError:
+                # PyPy ndarray flags are readonly - ignore
                 pass
             self._readonly = True
         else:
