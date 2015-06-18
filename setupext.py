@@ -293,7 +293,7 @@ class PkgConfig(object):
             except subprocess.CalledProcessError:
                 pass
             else:
-                output = output.decode(sys.getfilesystemencoding())
+                #output = output.decode(sys.getfilesystemencoding())
                 use_defaults = False
                 for token in output.split():
                     attr = flag_map.get(token[:2])
